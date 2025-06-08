@@ -35,8 +35,8 @@ pub use winit::{
     window::{CustomCursor as WinitCustomCursor, CustomCursorSource},
 };
 pub use winit_config::*;
-pub use winit_windows::*;
 pub use winit_monitors::*;
+pub use winit_windows::*;
 
 use crate::{
     accessibility::{AccessKitPlugin, WinitActionRequestHandlers},
@@ -181,6 +181,12 @@ pub struct RawWinitWindowEvent {
 /// Use `Res<EventLoopProxy>` to receive this resource.
 #[derive(Resource, Deref)]
 pub struct EventLoopProxyWrapper<T: 'static>(EventLoopProxy<T>);
+
+impl<T: 'static> EventLoopProxyWrapper<T> {
+    pub fn new(event_loop_proxy: EventLoopProxy<T>) -> Self {
+        Self(event_loop_proxy)
+    }
+}
 
 /// A wrapper around [`winit::event_loop::OwnedDisplayHandle`]
 ///

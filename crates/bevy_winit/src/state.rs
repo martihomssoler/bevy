@@ -58,7 +58,7 @@ use crate::{
 
 /// Persistent state that is used to run the [`App`] according to the current
 /// [`UpdateMode`].
-struct WinitAppRunnerState<T: Event> {
+pub struct WinitAppRunnerState<T: Event> {
     /// The running app.
     app: App,
     /// Exit value once the loop is finished.
@@ -107,7 +107,7 @@ struct WinitAppRunnerState<T: Event> {
 }
 
 impl<T: Event> WinitAppRunnerState<T> {
-    fn new(mut app: App) -> Self {
+    pub fn new(mut app: App) -> Self {
         app.add_event::<T>();
         #[cfg(feature = "custom_cursor")]
         app.init_resource::<CustomCursorCache>();
