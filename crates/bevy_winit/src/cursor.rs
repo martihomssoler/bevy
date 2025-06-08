@@ -46,7 +46,7 @@ pub use crate::custom_cursor::{CustomCursor, CustomCursorImage};
 ))]
 pub use crate::custom_cursor::CustomCursorUrl;
 
-pub(crate) struct CursorPlugin;
+pub struct CursorPlugin;
 
 impl Plugin for CursorPlugin {
     fn build(&self, app: &mut App) {
