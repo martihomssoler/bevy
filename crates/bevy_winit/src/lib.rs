@@ -36,6 +36,7 @@ pub use winit::{
 };
 pub use winit_config::*;
 pub use winit_windows::*;
+pub use winit_monitors::*;
 
 use crate::{
     accessibility::{AccessKitPlugin, WinitActionRequestHandlers},
