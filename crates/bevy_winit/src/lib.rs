@@ -42,7 +42,6 @@ pub use winit_windows::*;
 use crate::{
     accessibility::{AccessKitPlugin, WinitActionRequestHandlers},
     state::winit_runner,
-    winit_monitors::WinitMonitors,
 };
 
 pub mod accessibility;
