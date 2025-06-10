@@ -27,8 +27,9 @@ use bevy_app::{App, Last, Plugin};
 use bevy_ecs::prelude::*;
 use bevy_window::{exit_on_all_closed, Window, WindowCreated};
 pub use state::*;
-pub use system::{changed_windows, check_keyboard_focus_lost, despawn_windows};
-pub use system::{create_monitors, create_windows};
+pub use system::{
+    changed_windows, check_keyboard_focus_lost, create_monitors, create_windows, despawn_windows,
+};
 #[cfg(all(target_family = "wasm", target_os = "unknown"))]
 pub use winit::platform::web::CustomCursorExtWebSys;
 pub use winit::{

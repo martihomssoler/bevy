@@ -130,7 +130,7 @@ pub fn create_windows<F: QueryFilter + 'static>(
 
 /// Check whether keyboard focus was lost. This is different from window
 /// focus in that swapping between Bevy windows keeps window focus.
-pub(crate) fn check_keyboard_focus_lost(
+pub fn check_keyboard_focus_lost(
     mut focus_events: EventReader<WindowFocused>,
     mut keyboard_focus: EventWriter<KeyboardFocusLost>,
     mut keyboard_input: EventWriter<KeyboardInput>,
@@ -294,7 +294,7 @@ pub struct CachedWindow {
 /// - [`Window::transparent`] cannot be changed after the window is created.
 /// - [`Window::canvas`] cannot be changed after the window is created.
 /// - [`Window::focused`] cannot be manually changed to `false` after the window is created.
-pub(crate) fn changed_windows(
+pub fn changed_windows(
     mut changed_windows: Query<(Entity, &mut Window, &mut CachedWindow), Changed<Window>>,
     monitors: Res<WinitMonitors>,
     mut window_resized: EventWriter<WindowResized>,
