@@ -236,7 +236,7 @@ pub fn create_monitors(
     });
 }
 
-pub(crate) fn despawn_windows(
+pub fn despawn_windows(
     closing: Query<Entity, With<ClosingWindow>>,
     mut closed: RemovedComponents<Window>,
     window_entities: Query<Entity, With<Window>>,
