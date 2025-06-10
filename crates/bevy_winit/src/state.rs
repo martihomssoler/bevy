@@ -62,7 +62,7 @@ pub struct WinitAppRunnerState<T: Event> {
     /// The running app.
     app: App,
     /// Exit value once the loop is finished.
-    app_exit: Option<AppExit>,
+    pub app_exit: Option<AppExit>,
     /// Current update mode of the app.
     update_mode: UpdateMode,
     /// Is `true` if a new [`WindowEvent`] event has been received since the last update.
