@@ -25,7 +25,7 @@ use winit::{event_loop::EventLoop, window::WindowId};
 use bevy_a11y::AccessibilityRequested;
 use bevy_app::{App, Last, Plugin};
 use bevy_ecs::prelude::*;
-use bevy_window::{exit_on_all_closed, Window, WindowCreated};
+pub use bevy_window::{exit_on_all_closed, Window, WindowCreated};
 pub use state::*;
 pub use system::{
     changed_windows, check_keyboard_focus_lost, create_monitors, create_windows, despawn_windows,
